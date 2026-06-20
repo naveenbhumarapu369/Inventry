@@ -1,0 +1,81 @@
+.login-image {
+  background-image: url("./assets/login.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  position: relative;
+}
+.nav-link {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar {
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+body.light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark .card {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+body.dark .table {
+  color: white;
+}
+
+body.dark .table-dark {
+  background-color: #2d2d2d;
+}
+
+body.dark .form-control,
+body.dark .form-select {
+  background-color: #2d2d2d;
+  color: white;
+  border-color: #444;
+}
+
+body.dark .form-control:focus,
+body.dark .form-select:focus {
+  background-color: #2d2d2d;
+  color: white;
+}
+
+body.dark .text-muted {
+  color: #bdbdbd !important;
+}
+
+body.dark .bg-light {
+  background-color: #181818 !important;
+}
+
+body.dark .modal-content {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.theme-content {
+  min-height: 100vh;
+}
+
+body.light .theme-content {
+  background: #f8f9fa;
+}
+
+body.dark .theme-content {
+  background: #121212;
+}

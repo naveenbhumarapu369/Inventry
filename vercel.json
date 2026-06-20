@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "rootDirectory": "frontend",
+      "cleanUrls": true
+    },
+    {
+      "rootDirectory": "backend",
+      "cleanUrls": true
+    }
+  ]
+}
+
