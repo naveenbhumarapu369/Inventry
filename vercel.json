@@ -1,14 +1,14 @@
 {
-  "version": 2,
-  "projects": [
-    {
-      "rootDirectory": "frontend",
-      "cleanUrls": true
+  "experimentalServices": {
+    "frontend": {
+      "root": "frontend",
+      "routePrefix": "/",
+      "framework": "vite"
     },
-    {
-      "rootDirectory": "backend",
-      "cleanUrls": true
+    "backend": {
+      "root": "backend",
+      "routePrefix": "/_/backend",
+      "entrypoint": "server.js"
     }
-  ]
+  }
 }
-
