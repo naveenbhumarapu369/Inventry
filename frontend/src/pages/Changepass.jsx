@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../config";
 import "../App.css";
 
 function Changepass() {
@@ -31,7 +32,7 @@ function Changepass() {
 
     try {
       await axios.post(
-        `http://localhost:5001/api/changepassword/${user.id}`,
+        `${API_BASE_URL}/api/changepassword/${user.id}`, 
         {
           oldPassword,
           newPassword,

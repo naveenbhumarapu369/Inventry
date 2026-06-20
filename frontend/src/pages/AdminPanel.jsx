@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../config";
 import "../App.css";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
@@ -25,7 +26,7 @@ function AdminPanel() {
   const fetchProducts = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5001/api/products"
+        `${API_BASE_URL}/api/products`
       );
 
       setProducts(res.data);
@@ -47,14 +48,14 @@ function AdminPanel() {
     try {
       if (editId) {
         await axios.put(
-          `http://localhost:5001/api/products/${editId}`,
+          `${API_BASE_URL}/api/products/${editId}`, 
           product
         );
 
         alert("Product updated successfully");
       } else {
         await axios.post(
-          "http://localhost:5001/api/products",
+          `${API_BASE_URL}/api/products`,
           product
         );
 
@@ -100,7 +101,7 @@ function AdminPanel() {
 
     try {
       await axios.delete(
-        `http://localhost:5001/api/products/${id}`
+        `${API_BASE_URL}/api/products/${id}`
       );
 
       alert("Product deleted");

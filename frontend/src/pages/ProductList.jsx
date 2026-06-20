@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import { API_BASE_URL } from "../config";
 import Header from "../components/Header";
 
 function ProductList() {
@@ -18,7 +19,7 @@ function ProductList() {
   const fetchProducts = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5001/api/products"
+        `${API_BASE_URL}/api/products`
       );
 
       const sortedProducts = res.data.sort(
@@ -40,7 +41,7 @@ function ProductList() {
 
     try {
       await axios.delete(
-        `http://localhost:5001/api/products/${id}`
+        `${API_BASE_URL}/api/products/${id}`
       );
 
       setProducts(

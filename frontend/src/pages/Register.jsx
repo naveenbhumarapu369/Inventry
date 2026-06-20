@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { API_BASE_URL } from "../config";
 import "../App.css";
 
 function Register() {
@@ -24,7 +25,10 @@ function Register() {
     };
 
     try {
-      const response = await axios.post("http://localhost:5001/api/register",userData);
+      const response = await axios.post(
+        `${API_BASE_URL}/api/register`,
+        userData
+      );
 
       alert(response.data.message);
 

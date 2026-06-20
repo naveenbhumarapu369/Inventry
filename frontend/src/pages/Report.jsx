@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
+import { API_BASE_URL } from "../config";
 
 function Report() {
   const [products, setProducts] = useState([]);
@@ -12,7 +13,7 @@ function Report() {
   const fetchProducts = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5001/api/products"
+        `${API_BASE_URL}/api/products`
       );
 
       setProducts(res.data);
