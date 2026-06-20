@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": 2,
   "projects": [
@@ -12,3 +13,19 @@
   ]
 }
 
+=======
+{
+  "experimentalServices": {
+    "frontend": {
+      "root": "frontend",
+      "routePrefix": "/",
+      "framework": "vite"
+    },
+    "backend": {
+      "root": "backend",
+      "routePrefix": "/_/backend",
+      "entrypoint": "server.js"
+    }
+  }
+}
+>>>>>>> a5be8771bc938d3240964aa89163d99f33271362
