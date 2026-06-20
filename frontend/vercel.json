@@ -1,15 +1,14 @@
-<<<<<<< HEAD
 {
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" }
-  ]
+  "experimentalServices": {
+    "frontend": {
+      "root": "frontend",
+      "routePrefix": "/",
+      "framework": "vite"
+    },
+    "backend": {
+      "root": "backend",
+      "routePrefix": "/_/backend",
+      "entrypoint": "server.js"
+    }
+  }
 }
-
-=======
-{
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" }
-  ]
-}
-
->>>>>>> a5be8771bc938d3240964aa89163d99f33271362
